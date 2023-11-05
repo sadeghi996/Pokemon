@@ -1,17 +1,138 @@
-*,
-*::after,
-*::before {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: black;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    padding: 25px 0;
-}
+    *,
+    *::after,
+    *::before {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-color: rgb(53, 52, 52);
+        font-family: "Courier New", Courier, monospace;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        padding: 25px 0;
+        position: relative;
+    }
+    
+    .container>.pageBlack {
+        position: absolute;
+        width: 1100px;
+        height: 560px;
+        background-color: black;
+        pointer-events: none;
+        opacity: 0;
+        z-index: 10;
+    }
+    
+    .container>.pageWhite {
+        position: absolute;
+        width: 1100px;
+        height: 115px;
+        background-color: white;
+        bottom: 25px;
+        border-top: 4px solid black;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .buttones {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 65%;
+        border-right: 2px solid black;
+    }
+    
+    .buttones>button {
+        border: none;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    
+    .buttones>button:hover {
+        background-color: rgba(161, 161, 161, 0.6);
+        cursor: pointer;
+        border: 1px solid gray;
+    }
+    
+    .h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35%;
+    }
+    
+    .h1>h1 {
+        font-size: 25px;
+    }
+    
+    .container>.boxScore1 {
+        position: absolute;
+        width: 300px;
+        height: 70px;
+        background-color: white;
+        top: 80px;
+        left: 200px;
+        border: 4px solid black;
+        padding: 5px 15px;
+    }
+    
+    .container>.boxScore2 {
+        position: absolute;
+        width: 300px;
+        height: 70px;
+        background-color: white;
+        bottom: 200px;
+        right: 200px;
+        border: 4px solid black;
+        padding: 5px 15px;
+    }
+    
+    .rankes {
+        position: relative;
+    }
+    
+    .rankGray {
+        width: 100%;
+        height: 4px;
+        background-color: rgba(128, 128, 128, 0.39);
+        margin-bottom: 5px;
+        position: absolute;
+    }
+    
+    .rankGreen {
+        width: 100%;
+        height: 4px;
+        background-color: green;
+        position: absolute;
+    }
+    
+    .container>.pageWhite>.dialogue {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        font-size: 20px;
+        font-weight: 900;
+        background-color: rgb(127, 248, 188);
+        display: none;
+        text-align: center;
+        padding: 40px;
+        cursor: pointer;
+    }
+    
+    .container .userInterface,
+    .container .userInterface2,
+    .container .userInterface3 {
+        display: none;
+    }
+    
+    #attackType {
+        font-size: 25px;
+        font-weight: 900;
+    }

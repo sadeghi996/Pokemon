@@ -11,12 +11,44 @@
 <body>
 
     <div class="container">
+
+        <div class="pageBlack"></div>
+
         <canvas width="1100" height="560"></canvas>
+
+        <div class="boxScore1 userInterface">
+            <h1>Draggle</h1>
+            <div class="rankes">
+                <div class="rankGray "></div>
+                <div class="rankGreen " id="enemyHealthBar"></div>
+            </div>
+        </div>
+
+        <div class="boxScore2 userInterface2">
+            <h1>Emby</h1>
+            <div class="rankes">
+                <div class="rankGray "></div>
+                <div class="rankGreen " id="playerHealth"></div>
+            </div>
+        </div>
+
+        <div class="pageWhite userInterface3">
+            <div class="dialogue"></div>
+            <div class="buttones" id="attackButton"></div>
+            <div class="h1" id="attackType">
+                <h1>Attack Type</h1>
+            </div>
+        </div>
+
     </div>
 
 
 
-    <script src="js/index.js"></script>
+    <script src="js/index.js" type="module"></script>
+    <!-- CDN gsap for animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- CDN howler for sound -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js" integrity="sha512-xi/RZRIF/S0hJ+yJJYuZ5yk6/8pCiRlEXZzoguSMl+vk2i3m6UjUO/WcZ11blRL/O+rnj94JRGwt/CHbc9+6EA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>
